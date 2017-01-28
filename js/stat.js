@@ -51,14 +51,10 @@ window.renderStatistics = function (ctx, names, times) {
 };
 
 // Вспомогательные функции
-// 1. Синий цвет случайной насыщенности, для всех игроков кроме "Вы"
+// 1. Синий цвет случайной насыщенности, для всех игроков, кроме "Вы"
 window.colorize = function (name) {
-  if (name === 'Вы') {
-    return 'rgba(255, 0, 0, 1)';
-  } else {
-    var random = Math.floor(Math.random() * 256);
-    return 'rgba(0, 0, ' + random + ', 1)';
-  }
+  var random = Math.floor(Math.random() * 256);
+  return (name === 'Вы') ? 'rgba(255, 0, 0, 1)' : 'rgba(0, 0, ' + random + ', 1)';
 };
 
 // 2. Массив с расчитанными высотами на основе результатов, исходя из того, что максимальный - 150
