@@ -57,21 +57,23 @@ var colorsEyesLength = colors.eyes.length;
 var colorsFireballLength = colors.fireball.length;
 
 //  Начиная с нуля, далее по кругу в пределах длины текущего массива
-var currentColorNum = 0;
+var currentColorCoatNum = 0;
+var currentColorEyesNum = 0;
+var currentColorFireballNum = 0;
 
 coat.addEventListener('click', function () {
-  currentColorNum = (currentColorNum < colorsCoatLength - 1) ? (currentColorNum + 1) : 0;
-  coat.style.fill = colors.coat[currentColorNum];
+  currentColorCoatNum = (currentColorCoatNum < colorsCoatLength - 1) ? (currentColorCoatNum + 1) : 0;
+  coat.style.fill = colors.coat[currentColorCoatNum];
 });
 
 eyes.addEventListener('click', function () {
-  currentColorNum = (currentColorNum < colorsEyesLength - 1) ? (currentColorNum + 1) : 0;
-  eyes.style.fill = colors.eyes[currentColorNum];
+  currentColorEyesNum = (currentColorEyesNum < colorsEyesLength - 1) ? (currentColorEyesNum + 1) : 0;
+  eyes.style.fill = colors.eyes[currentColorEyesNum];
 });
 
 fireball.addEventListener('click', function () {
-  currentColorNum = (currentColorNum < colorsFireballLength - 1) ? (currentColorNum + 1) : 0;
-  fireball.style.background = colors.fireball[currentColorNum];
+  currentColorFireballNum = (currentColorFireballNum < colorsFireballLength - 1) ? (currentColorFireballNum + 1) : 0;
+  fireball.style.background = colors.fireball[currentColorFireballNum];
 });
 
 
